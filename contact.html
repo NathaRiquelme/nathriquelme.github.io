@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      :root,
+      [user-theme="pride"] {
+        --font-primary: "Roboto", Helvetica, sans-serif;
+        --font-headlines: "lora", "roboto", helvetica, sans-serif;
+        --font-headlines-bold: "lora", "roboto", helvetica, sans-serif;
+        --font-headlines-medium: "lora", "roboto", helvetica, sans-serif;
+        --color-background-lightest: #fff;
+        --color-background-primary: #fbf4e9;
+        --color-background-primary-darker: #deccb1;
+        --color-background-primary-darkest: #927a54;
+        --color-border-lighter: #2d424d;
+        --color-text-lighter: #2d424d;
+        --color-text-primary: #14252e;
+        --color-text-darker: #05110c;
+        --color-gray-1-lighter: #d0cfd7;
+        --color-gray-1: #9694a3;
+        --color-accent-1-lightest: #ebdcf8;
+        --color-accent-1-lighter: #e6ccf5;
+        --color-accent-1: #cba5e9;
+        --color-accent-1-darker: #bd8ce3;
+        --color-accent-1-darkest: #986bbb;
+        --color-accent-1-outlines: #7641a0;
+        --color-accent-1-text: #4b2f61;
+        --color-accent-2-shadow: #fff7c2;
+        --color-accent-2-lightest: #fff4b0;
+        --color-accent-2-lighter: #efdd6c;
+        --color-accent-2: #dfc935;
+        --color-accent-2-darker: #ae9a17;
+        --color-accent-2-darkest: #8a7909;
+        --color-accent-3-lighter: #cba5e9;
+        --color-accent-3: #cba5e9;
+        --color-accent-4: #471a57;
+        --rainbow-red: #f4564b;
+        --rainbow-orange: #ed854a;
+        --rainbow-yellow: #e0d830;
+        --rainbow-green: #53b25d;
+        --rainbow-blue: #4086f0;
+        --rainbow-purple: #8c47e3;
+        --rainbow-pink: #ec66df;
+        --color-selection-text: var(--color-text-darker);
+        --color-selection-background: var(--color-accent-3-lighter);
+        --animation-delay: 500ms;
+        --size-text-default: 1.312rem;
+        --size-text-small: 1rem;
+        --size-text-medium: 1.75rem;
+        --size-text-large: 2.5rem;
+        --size-text-xlarge: 3.33rem;
+        --size-text-xxlarge: 4.2rem;
+        --size-text-huge: 6rem;
+        --category-background-color: var(--color-accent-1-lighter);
+        --category-accent-color: var(--color-accent-1-darker);
+        --callout-inner-padding: 1rem;
+        --callout-outer-padding: 0.25rem;
+        --callout-radius: 3rem;
+        --callout-border-width: 2px;
+        --card-border-radius: 3px;
+        --color-shadow-letter: var(--color-accent-1-lighter);
+        --offering-outline-color: var(--color-text-lighter);
+        --offering-active-color: var(--color-accent-1-lightest);
+        --cell-background: var(--color-accent-1-lightest);
+        --cell-border: var(--color-accent-1-darkest);
+        --pressable-button-text-color: var(--color-text-darker);
+        --pressable-button-border-radius: 3px;
+        --pressable-button-border-width: 2px;
+        --pressable-button-outline-color: var(--color-text-lighter);
+        --pressable-button-background-color: var(--color-background-primary);
+        --pressable-button-shadow-color: transparent;
+        --link-accent-secondary-shadow: var(--color-accent-1);
+        --general-link-color: var(--color-accent-2);
+        --accent-area: var(--color-accent-1-lighter);
+        --accent-area-border: var(--color-accent-1-darkest);
+        --accent-area-text-color: var(--color-text-primary);
+        --accent-link-bg: var(--color-accent-2-lightest);
+        --accent-link-border-color: var(--color-text-lighter);
+        --accent-link-active-color: var(--color-text-darker);
+        --callout-text-color: var(--color-text-darker);
+        --callout-background: var(--color-accent-2-lighter);
+        --callout-outline: var(--color-accent-2-darkest);
+        --credits-link: var(--color-text-primary);
+        --credits-background: var(--color-accent-1-lighter);
+        --credits-outline: var(--color-accent-1-outlines);
+        --credits-text: var(--color-text-primary);
+        --subscribe-outline: var(--color-text-lighter);
+        --subscribe-color: var(--color-text-primary);
+        --talk-outline: var(--color-text-lighter);
+        --talk-color: inherit;
+        --newsletter-card-border-color: var(--color-border-lighter);
+        --newsletter-card-text-color: var(--color-text-primary);
+        --contact-card-border-color: var(--color-border-lighter);
+        --contact-card-background-color: var(--color-accent-2-lighter);
+        --availability-background-color: var(--color-accent-1-lightest);
+        --availability-text-color: var(--color-text-darker);
+        --post-highlight-color: var(--color-accent-2-lighter);
+        --code-block-background: var(--color-accent-2-lightest);
+        --code-block-border: var(--color-accent-2-darkest);
+        --code-inline-border: var(--color-accent-2);
+        --code-text-color: var(--color-text-darker);
+        --socials-background: var(--color-accent-2-lightest);
+        --socials-border: var(--color-accent-2-darkest);
+        --socials-link: var(--color-text-primary);
+        --socials-link-shadow: var(--color-accent-2-darker);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--color-background-primary);
+        color: var(--color-text-primary);
+        font-family: var(--font-primary);
+        font-size: var(--size-text-small);
+      }
+      .contact {
+        background-color: var(--color-background-lightest);
+        border: 2px solid var(--color-border-lighter);
+        padding: 2rem;
+        margin-bottom: 4rem;
+        width: 70rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4rem;
+        --pressable-button-outline-color: var(--contact-card-border-color);
+      }
+      .contact h2 {
+        font-family: var(--font-headlines);
+        font-weight: bold;
+        font-size: var(--size-text-large);
+      }
+      .contact p {
+        margin-bottom: 1.5rem;
+        font-size: var(--size-text-medium);
+        margin-top: 1.312rem;
+      }
+      .contact p a {
+        text-decoration: none;
+        color: var(--color-text-primary);
+      }
+      .contact ul {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        row-gap: 2rem;
+        column-gap: 2rem;
+        margin-left: 0;
+      }
+      .contact ul li {
+        margin-top: 1rem;
+      }
+      .contact ul li a {
+        text-decoration: none;
+        background-color: var(--contact-card-background-color);
+        font-size: var(--size-text-medium);
+        margin-bottom: 1rem;
+      }
+      .pressable-button {
+        --corners: var(--pressable-button-border-radius);
+        --border: var(--pressable-button-border-width);
+        --color: var(--pressable-button-outline-color);
+        border-radius: var(--corners);
+        border: 2px solid var(--color);
+        padding: 0.5rem 1rem;
+        box-shadow: 0.5px 1px 0 0 var(--color), 1.5px 2px 0 0 var(--color),
+          2.5px 3px 0 0 var(--color), 3.5px 4px 0 0 var(--color),
+          4.5px 5px 0 0 var(--color), 5.5px 6px 0 0 var(--color);
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: box-shadow 0.35s, top 0.3s, left 0.3s, transform 0.4s,
+          outline-color 0.4s;
+        cursor: pointer;
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+        display: inline-block;
+        outline: 2px dashed transparent;
+        position: relative;
+        color: var(--pressable-button-text-color);
+      }
+      .pressable-button:hover {
+        box-shadow: 0 0 0 0 var(--color), 0 0 0 0 var(--color),
+          0 0 0 0 var(--color), 0 0 0 0 var(--color), 0 0 0 0 var(--color),
+          0 0 0 0 var(--color);
+        top: 6px;
+        left: 5.5px;
+        transform: rotateX(5deg) rotateY(3deg) rotateZ(0.25deg);
+      }
+      .pressable-button:focus {
+        --background: var(--pressable-button-background-color);
+        --shadow: var(--pressable-button-shadow-color);
+        box-shadow: 0 0 0 0 var(--color), 0 0 0 0 var(--color),
+          0 0 0 0 var(--color), 0 0 0 0 var(--color), 0 0 0 0 var(--color),
+          0 0 0 0 var(--color), 0 0 0 0 var(--color),
+          0 0 0 2px var(--background), 0 0 0 4px var(--color);
+        outline: 0;
+      }
+      .pressable-button:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 0.5em;
+        height: 0;
+        border-radius: 3em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        background-color: transparent;
+        transition: bottom 0.4s, height 0.3s;
+      }
+      .pressable-button:focus:after {
+        height: 0.5em;
+        bottom: -1em;
+        background-color: var(--color-text-lighter);
+      }
+      .link-accent-secondary {
+        text-decoration: none;
+        padding-bottom: 0.15rem;
+        border-bottom: 0.2rem solid var(--accent-link-border-color);
+        position: relative;
+        top: 0;
+        transition: padding 0.5s, top 0.35s, box-shadow 0.4s;
+        box-shadow: 0 0 0 0 var(--link-accent-secondary-shadow);
+      }
+      .link-accent-secondary:is(:hover, :focus) {
+        padding-bottom: 0.5rem;
+        top: -0.25rem;
+        box-shadow: 0 0.4rem 0 -0.2rem var(--link-accent-secondary-shadow);
+      }
+      .social {
+        background-color: var(--color-background-lightest);
+        border-top: 0.5px solid var(--color-border-lighter);
+        margin-top: 10rem;
+        --general-link-color: var(--color-text-lighter);
+      }
+      .social .switcher-wrapper {
+        border-top: 2px solid var(--color-border-lighter);
+      }
+      .social .switcher-wrapper h2 {
+        margin-top: 4.2rem;
+        margin-bottom: 1.312rem;
+        font-size: var(--size-text-medium);
+      }
+      .social .about-summary {
+        padding: 0 0 4rem 0;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+      }
+      .social .about-summary > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1rem;
+      }
+      .social .about-summary h2 {
+        line-height: 125%;
+      }
+      .social .about-summary .pronouns {
+        text-align: center;
+        font-size: var(--size-text-medium);
+        margin-top: 1rem;
+      }
+      .social .about-summary .pronouns span {
+        display: block;
+        font-family: var(--font-headlines-bold);
+        font-size: var(--size-text-large);
+        text-transform: uppercase;
+        margin-top: 0.5rem;
+      }
+      .social .about-summary .explanation {
+        text-align: right;
+        padding-left: 2rem;
+        font-size: var(--size-text-medium);
+        color: var(--color-text-lighter);
+        margin-top: 0.5rem;
+      }
+      .social .socials {
+        padding: 1rem 4rem;
+        background-color: var(--socials-background);
+        border-top: 2px solid var(--socials-border);
+        text-align: center;
+      }
+      .social .socials li {
+        list-style-type: none;
+        text-align: left;
+        display: inline-block;
+      }
+      .social .socials > li + li {
+        margin-left: 1.312vw;
+        margin-left: calc(1.312vw + 1.312rem);
+      }
+      .social .socials li a {
+        color: var(--socials-link);
+        font-family: var(--font-headlines-medium);
+        font-size: var(--size-text-default);
+        text-decoration: none;
+        padding-bottom: 0;
+        --link-accent-secondary-shadow: var(--socials-link-shadow);
+        --accent-link-border-color: var(--socials-link);
+      }
+    </style>
+  </head>
+  <body>
+    <footer>
+      <div class="contact">
+        <h2>Contact Information</h2>
+        <p>
+          If you'd like to get in touch, feel free to reach me through the
+          following:
+          <a class="link-accent-secondary" href="nathariquelme@gmail.com"
+            >nathariquelme@gmail.com</a
+          >
+        </p>
+        <ul>
+          <li>
+            <a class="pressable-button" href="mailto:nathariquelme@gmail.com"
+              >Send me an email</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="social">
+        <ul class="socials">
+          <li>
+            <a href="/newsletter" class="link-accent-secondary">Newsletter</a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/sarahfossheim"
+              class="link-accent-secondary"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/sarah-fossheim/"
+              class="link-accent-secondary"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/sarahfossheim"
+              class="link-accent-secondary"
+              >Twitter</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

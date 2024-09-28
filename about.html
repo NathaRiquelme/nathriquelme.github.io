@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      :root,
+      [user-theme="pride"] {
+        --font-primary: "Roboto", Helvetica, sans-serif;
+        --font-headlines: "lora", "roboto", helvetica, sans-serif;
+        --font-headlines-bold: "lora", "roboto", helvetica, sans-serif;
+        --font-headlines-medium: "lora", "roboto", helvetica, sans-serif;
+        --color-background-lightest: #fff;
+        --color-background-primary: #fbf4e9;
+        --color-background-primary-darker: #deccb1;
+        --color-background-primary-darkest: #927a54;
+        --color-border-lighter: #2d424d;
+        --color-text-lighter: #2d424d;
+        --color-text-primary: #14252e;
+        --color-text-darker: #05110c;
+        --color-gray-1-lighter: #d0cfd7;
+        --color-gray-1: #9694a3;
+        --color-accent-1-lightest: #ebdcf8;
+        --color-accent-1-lighter: #e6ccf5;
+        --color-accent-1: #cba5e9;
+        --color-accent-1-darker: #bd8ce3;
+        --color-accent-1-darkest: #986bbb;
+        --color-accent-1-outlines: #7641a0;
+        --color-accent-1-text: #4b2f61;
+        --color-accent-2-shadow: #fff7c2;
+        --color-accent-2-lightest: #fff4b0;
+        --color-accent-2-lighter: #efdd6c;
+        --color-accent-2: #dfc935;
+        --color-accent-2-darker: #ae9a17;
+        --color-accent-2-darkest: #8a7909;
+        --color-accent-3-lighter: #cba5e9;
+        --color-accent-3: #cba5e9;
+        --color-accent-4: #471a57;
+        --rainbow-red: #f4564b;
+        --rainbow-orange: #ed854a;
+        --rainbow-yellow: #e0d830;
+        --rainbow-green: #53b25d;
+        --rainbow-blue: #4086f0;
+        --rainbow-purple: #8c47e3;
+        --rainbow-pink: #ec66df;
+        --color-selection-text: var(--color-text-darker);
+        --color-selection-background: var(--color-accent-3-lighter);
+        --animation-delay: 500ms;
+        --size-text-default: 1.312rem;
+        --size-text-small: 1rem;
+        --size-text-medium: 1.75rem;
+        --size-text-large: 2.5rem;
+        --size-text-xlarge: 3.33rem;
+        --size-text-xxlarge: 4.2rem;
+        --size-text-huge: 6rem;
+        --category-background-color: var(--color-accent-1-lighter);
+        --category-accent-color: var(--color-accent-1-darker);
+        --callout-inner-padding: 1rem;
+        --callout-outer-padding: 0.25rem;
+        --callout-radius: 3rem;
+        --callout-border-width: 2px;
+        --card-border-radius: 3px;
+        --color-shadow-letter: var(--color-accent-1-lighter);
+        --offering-outline-color: var(--color-text-lighter);
+        --offering-active-color: var(--color-accent-1-lightest);
+        --cell-background: var(--color-accent-1-lightest);
+        --cell-border: var(--color-accent-1-darkest);
+        --pressable-button-text-color: var(--color-text-darker);
+        --pressable-button-border-radius: 3px;
+        --pressable-button-border-width: 2px;
+        --pressable-button-outline-color: var(--color-text-lighter);
+        --pressable-button-background-color: var(--color-background-primary);
+        --pressable-button-shadow-color: transparent;
+        --link-accent-secondary-shadow: var(--color-accent-1);
+        --general-link-color: var(--color-accent-2);
+        --accent-area: var(--color-accent-1-lighter);
+        --accent-area-border: var(--color-accent-1-darkest);
+        --accent-area-text-color: var(--color-text-primary);
+        --accent-link-bg: var(--color-accent-2-lightest);
+        --accent-link-border-color: var(--color-text-lighter);
+        --accent-link-active-color: var(--color-text-darker);
+        --callout-text-color: var(--color-text-darker);
+        --callout-background: var(--color-accent-2-lighter);
+        --callout-outline: var(--color-accent-2-darkest);
+        --credits-link: var(--color-text-primary);
+        --credits-background: var(--color-accent-1-lighter);
+        --credits-outline: var(--color-accent-1-outlines);
+        --credits-text: var(--color-text-primary);
+        --subscribe-outline: var(--color-text-lighter);
+        --subscribe-color: var(--color-text-primary);
+        --talk-outline: var(--color-text-lighter);
+        --talk-color: inherit;
+        --newsletter-card-border-color: var(--color-border-lighter);
+        --newsletter-card-text-color: var(--color-text-primary);
+        --contact-card-border-color: var(--color-border-lighter);
+        --contact-card-background-color: var(--color-accent-2-lighter);
+        --availability-background-color: var(--color-accent-1-lightest);
+        --availability-text-color: var(--color-text-darker);
+        --post-highlight-color: var(--color-accent-2-lighter);
+        --code-block-background: var(--color-accent-2-lightest);
+        --code-block-border: var(--color-accent-2-darkest);
+        --code-inline-border: var(--color-accent-2);
+        --code-text-color: var(--color-text-darker);
+        --socials-background: var(--color-accent-2-lightest);
+        --socials-border: var(--color-accent-2-darkest);
+        --socials-link: var(--color-text-primary);
+        --socials-link-shadow: var(--color-accent-2-darker);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--color-background-primary);
+        color: var(--color-text-primary);
+        font-family: var(--font-primary);
+        font-size: var(--size-text-small);
+      }
+      .x-large {
+        display: block;
+        width: 85rem;
+        max-width: 97%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .large {
+        display: block;
+        width: 75rem;
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .about-first {
+        margin: 0 auto;
+        background-color: var(--color-background-lightest);
+        padding-bottom: 3rem;
+        padding-left: 2rem;
+        padding-top: 10rem;
+        border-bottom: 2px solid var(--color-border-lighter);
+      }
+
+      .shadow-letters {
+        font-family: var(--font-headlines-bold);
+        font-weight: 400;
+        max-width: 10ch;
+        font-size: var(--size-text-huge);
+        line-height: 110%;
+        margin-bottom: 2rem;
+        position: relative;
+        text-shadow: 0.25px 0.25px 0 var(--color-shadow-letter),
+          0.5px 0.5px 0 var(--color-shadow-letter),
+          0.75px 0.75px 0 var(--color-shadow-letter),
+          1px 1px 0 var(--color-shadow-letter),
+          1.25px 1.25px 0 var(--color-shadow-letter),
+          1.5px 1.5px 0 var(--color-shadow-letter),
+          1.75px 1.75px 0 var(--color-shadow-letter),
+          2px 2px 0 var(--color-shadow-letter),
+          2.25px 2.25px 0 var(--color-shadow-letter),
+          2.5px 2.5px 0 var(--color-shadow-letter),
+          2.75px 2.75px 0 var(--color-shadow-letter),
+          3px 3px 0 var(--color-shadow-letter),
+          3.25px 3.25px 0 var(--color-shadow-letter),
+          3.5px 3.5px 0 var(--color-shadow-letter),
+          3.75px 3.75px 0 var(--color-shadow-letter),
+          4px 4px 0 var(--color-shadow-letter),
+          5.25px 5.25px 0 var(--color-shadow-letter),
+          5.5px 5.5px 0 var(--color-shadow-letter),
+          5.75px 5.75px 0 var(--color-shadow-letter),
+          6px 6px 0 var(--color-shadow-letter);
+      }
+      .description {
+        max-width: 42rem;
+        font-size: var(--size-text-medium);
+        line-height: 140%;
+        margin-bottom: 1em;
+      }
+
+      .description p:nth-child(2) {
+        margin-top: 1.5rem;
+      }
+
+      a:not(
+          .link-accent,
+          .cell-cta,
+          .pressable-button,
+          .link-accent-secondary
+        ):is(:hover, :focus) {
+        text-decoration-thickness: 0.25em;
+      }
+      .link-accent-secondary {
+        text-decoration: none;
+        padding-bottom: 0.15rem;
+        border-bottom: 0.2rem solid var(--accent-link-border-color);
+        position: relative;
+        top: 0;
+        transition: padding 0.5s, top 0.35s, box-shadow 0.4s;
+        box-shadow: 0 0 0 0 var(--link-accent-secondary-shadow);
+        color: var(--color-text-primary);
+      }
+      .link-accent-secondary:is(:hover, :focus) {
+        padding-bottom: 0.5rem;
+        top: -0.25rem;
+        box-shadow: 0 0.4rem 0 -0.2rem var(--link-accent-secondary-shadow);
+      }
+      .summary {
+        position: sticky;
+        top: 23rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 0;
+        color: var(--callout-text-color);
+        --general-link-color: var(--color-text-primary);
+      }
+      .summary .links {
+        display: block;
+        padding: 2rem;
+        width: 25rem;
+        background-color: var(--callout-background);
+        border: 2px solid var(--callout-outline);
+        border-radius: 2px;
+        margin-left: auto;
+        z-index: 1;
+        position: relative;
+        right: 0;
+        top: -28rem;
+      }
+      .summary .links h2 {
+        font-size: var(--size-text-medium);
+        margin-bottom: 2rem;
+      }
+      .summary .links p,
+      .summary .links ul {
+        font-size: var(--size-text-medium);
+      }
+      .summary .links p {
+        margin-bottom: 2rem;
+        line-height: 140%;
+      }
+      .summary .links p:last-child {
+        margin-bottom: 0;
+      }
+      .summary .links a {
+        color: inherit;
+      }
+      .summary a:is(:focus, :hover) {
+        text-decoration-color: var(--callout-text-color);
+        outline-color: var(--callout-text-color);
+      }
+      .skills__title {
+        font-family: var(--font-headlines-medium);
+        font-weight: 400;
+        font-size: var(--size-text-large);
+        margin-bottom: 1rem;
+      }
+
+      .skills {
+        margin: 0 auto;
+        padding: 1rem;
+        padding-top: 6rem;
+        padding-left: 2rem;
+      }
+      .skills > * {
+        max-width: 40rem;
+        margin-bottom: 1.5rem;
+      }
+      .skills > p {
+        font-size: var(--size-text-medium);
+      }
+      .skills ul {
+        margin-left: 1.25em;
+      }
+      .skills ul li {
+        margin-bottom: 0.5em;
+      }
+
+      .skills .technologies {
+        margin-left: 0;
+      }
+      .skills .technologies li {
+        list-style-type: none;
+        display: inline-block;
+        background-color: var(--color-background-lightest);
+        padding: 0.6rem 1rem;
+        border-radius: var(--card-border-radius);
+        margin-right: 1rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid var(--color-gray-1);
+      }
+    </style>
+  </head>
+  <body class="tmpl-home">
+    <section class="about">
+      <div class="about-first">
+        <h1 class="shadow-letters">Nath Riquelme.</h1>
+        <div class="description">
+          <p>
+            I'm a beginner web developer and CEO of a printing company. In my
+            free time, I'm dedicated to learning full-stack development to
+            create impactful projects that make a positive difference in the
+            world.
+          </p>
+          <p>
+            <a href="./about.html" class="link-accent-secondary">About me</a>
+            /
+            <a href="./projects.html" class="link-accent-secondary">Projects</a
+            >.
+          </p>
+        </div>
+        <aside class="summary x-large">
+          <div class="links">
+            <h2>TL;DR</h2>
+
+            <p>
+              Currently digitizing my printing company and delegating tasks to
+              fully focus on tech. I love web development, AI, data science, and
+              businesses. Outside of work, I enjoy good coffee, books, and
+              travel.
+            </p>
+            <p>
+              I work freelance, and you can
+              <a href="https://fossheim.io/work">contact me</a>.
+            </p>
+          </div>
+        </aside>
+      </div>
+      <div class="skills">
+        <h2 class="skills__title">Skills</h2>
+        <ul class="technologies">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>MongoDB</li>
+          <li>Express</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

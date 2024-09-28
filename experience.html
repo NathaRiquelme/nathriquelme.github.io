@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      :root,
+      [user-theme="pride"] {
+        --font-primary: "Roboto", Helvetica, sans-serif;
+        --font-headlines: "lora", "roboto", helvetica, sans-serif;
+        --font-headlines-bold: "lora", "roboto", helvetica, sans-serif;
+        --font-headlines-medium: "lora", "roboto", helvetica, sans-serif;
+        --color-background-lightest: #fff;
+        --color-background-primary: #fbf4e9;
+        --color-background-primary-darker: #deccb1;
+        --color-background-primary-darkest: #927a54;
+        --color-border-lighter: #2d424d;
+        --color-text-lighter: #2d424d;
+        --color-text-primary: #14252e;
+        --color-text-darker: #05110c;
+        --color-gray-1-lighter: #d0cfd7;
+        --color-gray-1: #9694a3;
+        --color-accent-1-lightest: #ebdcf8;
+        --color-accent-1-lighter: #e6ccf5;
+        --color-accent-1: #cba5e9;
+        --color-accent-1-darker: #bd8ce3;
+        --color-accent-1-darkest: #986bbb;
+        --color-accent-1-outlines: #7641a0;
+        --color-accent-1-text: #4b2f61;
+        --color-accent-2-shadow: #fff7c2;
+        --color-accent-2-lightest: #fff4b0;
+        --color-accent-2-lighter: #efdd6c;
+        --color-accent-2: #dfc935;
+        --color-accent-2-darker: #ae9a17;
+        --color-accent-2-darkest: #8a7909;
+        --color-accent-3-lighter: #cba5e9;
+        --color-accent-3: #cba5e9;
+        --color-accent-4: #471a57;
+        --rainbow-red: #f4564b;
+        --rainbow-orange: #ed854a;
+        --rainbow-yellow: #e0d830;
+        --rainbow-green: #53b25d;
+        --rainbow-blue: #4086f0;
+        --rainbow-purple: #8c47e3;
+        --rainbow-pink: #ec66df;
+        --color-selection-text: var(--color-text-darker);
+        --color-selection-background: var(--color-accent-3-lighter);
+        --animation-delay: 500ms;
+        --size-text-default: 1.312rem;
+        --size-text-small: 1rem;
+        --size-text-medium: 1.75rem;
+        --size-text-large: 2.5rem;
+        --size-text-xlarge: 3.33rem;
+        --size-text-xxlarge: 4.2rem;
+        --size-text-huge: 6rem;
+        --category-background-color: var(--color-accent-1-lighter);
+        --category-accent-color: var(--color-accent-1-darker);
+        --callout-inner-padding: 1rem;
+        --callout-outer-padding: 0.25rem;
+        --callout-radius: 3rem;
+        --callout-border-width: 2px;
+        --card-border-radius: 3px;
+        --color-shadow-letter: var(--color-accent-1-lighter);
+        --offering-outline-color: var(--color-text-lighter);
+        --offering-active-color: var(--color-accent-1-lightest);
+        --cell-background: var(--color-accent-1-lightest);
+        --cell-border: var(--color-accent-1-darkest);
+        --pressable-button-text-color: var(--color-text-darker);
+        --pressable-button-border-radius: 3px;
+        --pressable-button-border-width: 2px;
+        --pressable-button-outline-color: var(--color-text-lighter);
+        --pressable-button-background-color: var(--color-background-primary);
+        --pressable-button-shadow-color: transparent;
+        --link-accent-secondary-shadow: var(--color-accent-1);
+        --general-link-color: var(--color-accent-2);
+        --accent-area: var(--color-accent-1-lighter);
+        --accent-area-border: var(--color-accent-1-darkest);
+        --accent-area-text-color: var(--color-text-primary);
+        --accent-link-bg: var(--color-accent-2-lightest);
+        --accent-link-border-color: var(--color-text-lighter);
+        --accent-link-active-color: var(--color-text-darker);
+        --callout-text-color: var(--color-text-darker);
+        --callout-background: var(--color-accent-2-lighter);
+        --callout-outline: var(--color-accent-2-darkest);
+        --credits-link: var(--color-text-primary);
+        --credits-background: var(--color-accent-1-lighter);
+        --credits-outline: var(--color-accent-1-outlines);
+        --credits-text: var(--color-text-primary);
+        --subscribe-outline: var(--color-text-lighter);
+        --subscribe-color: var(--color-text-primary);
+        --talk-outline: var(--color-text-lighter);
+        --talk-color: inherit;
+        --newsletter-card-border-color: var(--color-border-lighter);
+        --newsletter-card-text-color: var(--color-text-primary);
+        --contact-card-border-color: var(--color-border-lighter);
+        --contact-card-background-color: var(--color-accent-2-lighter);
+        --availability-background-color: var(--color-accent-1-lightest);
+        --availability-text-color: var(--color-text-darker);
+        --post-highlight-color: var(--color-accent-2-lighter);
+        --code-block-background: var(--color-accent-2-lightest);
+        --code-block-border: var(--color-accent-2-darkest);
+        --code-inline-border: var(--color-accent-2);
+        --code-text-color: var(--color-text-darker);
+        --socials-background: var(--color-accent-2-lightest);
+        --socials-border: var(--color-accent-2-darkest);
+        --socials-link: var(--color-text-primary);
+        --socials-link-shadow: var(--color-accent-2-darker);
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: var(--color-background-primary);
+        color: var(--color-text-primary);
+        font-family: var(--font-primary);
+        font-size: var(--size-text-small);
+      }
+      .x-large {
+        display: block;
+        width: 85rem;
+        max-width: 97%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .full {
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .xx-large {
+        display: block;
+        width: 95rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .work {
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #ffb68c;
+        border-top: 2px solid var(--accent-area-border);
+        border-bottom: 2px solid var(--accent-area-border);
+        border-radius: 2px;
+        padding: 2rem 3rem;
+        position: relative;
+      }
+      .work h2 {
+        text-align: center;
+        max-width: 50rem;
+        padding-left: 1.5rem;
+        margin: 1rem auto 3rem auto;
+        font-family: var(--font-headlines);
+        font-weight: bold;
+        font-size: var(--size-text-medium);
+      }
+      .work .offerings {
+        margin: 2rem auto 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        column-gap: 3rem;
+        row-gap: 3rem;
+        margin-bottom: 6rem;
+      }
+      .work .offerings .offering {
+        list-style-type: none;
+        padding: 3rem 1.5rem;
+        border: 2px solid var(--offering-outline-color);
+        border-radius: 0.5rem;
+        box-shadow: 1px 1px 0 0 var(--offering-outline-color),
+          2px 2px 0 0 var(--offering-outline-color),
+          3px 3px 0 0 var(--offering-outline-color),
+          4px 4px 0 0 var(--offering-outline-color),
+          5px 5px 0 0 var(--offering-outline-color),
+          6px 6px 0 0 var(--offering-outline-color);
+        transform: rotateZ(-1deg);
+        transition: transform 0.3s ease-out, background-color 0.35s,
+          box-shadow 0.3s ease-out;
+        color: var(--accent-area-text-color);
+      }
+      .work .offerings .offering:nth-child(2n) {
+        transform: rotateZ(1deg);
+      }
+      .work .offerings .offering:nth-child(3n) {
+        transform: rotateZ(1deg);
+      }
+      .work .offerings .offering:nth-child(4n) {
+        transform: rotateZ(-1deg);
+      }
+      .work .offerings .offering:hover {
+        transform: rotateZ(0);
+        background-color: var(--offering-active-color);
+        box-shadow: 1px 1px 0 0 var(--offering-outline-color),
+          2px 2px 0 0 var(--offering-outline-color),
+          3px 3px 0 0 var(--offering-outline-color),
+          4px 4px 0 0 var(--offering-outline-color),
+          5px 5px 0 0 var(--offering-outline-color),
+          6px 6px 0 0 var(--offering-outline-color),
+          7px 7px 0 0 var(--offering-outline-color),
+          8px 8px 0 0 var(--offering-outline-color),
+          9px 9px 0 0 var(--offering-outline-color);
+      }
+      .work .offerings .offering:has(a:focus) {
+        transform: rotateZ(0);
+        background-color: var(--offering-active-color);
+        box-shadow: 1px 1px 0 0 var(--offering-outline-color),
+          2px 2px 0 0 var(--offering-outline-color),
+          3px 3px 0 0 var(--offering-outline-color),
+          4px 4px 0 0 var(--offering-outline-color),
+          5px 5px 0 0 var(--offering-outline-color),
+          6px 6px 0 0 var(--offering-outline-color),
+          7px 7px 0 0 var(--offering-outline-color),
+          8px 8px 0 0 var(--offering-outline-color),
+          9px 9px 0 0 var(--offering-outline-color);
+      }
+      /* .work .offerings .offering > div {
+        max-width: 75ch;
+        margin-top: 1rem;
+      } */
+      .work .offerings .offering > div p {
+        margin-bottom: 1.5rem;
+        font-size: calc(var(--size-text-default) * 1);
+      }
+
+      .work .offerings .offering a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 2px solid var(--accent-area-text-color);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        transition: padding 0.25s;
+      }
+      .work .offerings .offering a:focus,
+      .work .offerings .offering a:hover {
+        padding-bottom: 0.3rem;
+        padding-right: 1rem;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+      }
+      .work .offerings .offering a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+      .work .offerings .offering a:focus::after {
+        border-radius: 0.55rem 1.25rem;
+        width: 100%;
+        width: calc(100% + 14px);
+        height: 100%;
+        height: calc(100% + 14px);
+        top: -4px;
+        left: -4px;
+        box-shadow: 0 0 0 3px var(--color-text-lighter),
+          0 0 0 5px var(--accent-area), 0 0 0 8px var(--color-text-lighter);
+      }
+      .work .offerings .offering a:focus:hover::after {
+        width: calc(100% + 17px);
+        height: 100%;
+        height: calc(100% + 17px);
+        top: -4px;
+        left: -4px;
+      }
+      .work .offerings .offering h3 {
+        font-weight: bold;
+        font-family: var(--font-headlines-medium);
+        font-size: var(--size-text-default);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="work full">
+      <h2>Experience</h2>
+
+      <div class="offerings xx-large">
+        <article class="offering">
+          <h3>Web Developer Intern</h3>
+          <p>XYZ Company (January 2023 - Present)</p>
+          <p>
+            Worked on responsive websites and collaborated with teams to improve
+            the user interface using HTML, CSS, and JavaScript.
+          </p>
+        </article>
+        <article class="offering">
+          <h3>Web Developer Intern</h3>
+          <p>XYZ Company (January 2023 - Present)</p>
+          <p>
+            Worked on responsive websites and collaborated with teams to improve
+            the user interface using HTML, CSS, and JavaScript.
+          </p>
+        </article>
+      </div>
+    </section>
+  </body>
+</html>
